@@ -114,26 +114,12 @@ public class ArraySet<T> extends AbstractSet<T> implements NavigableSet<T> {
 
     @Override
     public boolean contains(Object o) {
-        if (o == null) throw new NullPointerException();
         return search((T) o) >= 0;
     }
 
-
     @Override
     public Iterator<T> iterator() {
-        return new Iterator<T>() {
-            private int i = 0;
-
-            @Override
-            public boolean hasNext() {
-                return i < data.size();
-            }
-
-            @Override
-            public T next() {
-                return data.get(i++);
-            }
-        };
+        return Collections.unmodifiableList(data).iterator();
     }
 
     @Override
