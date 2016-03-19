@@ -5,6 +5,7 @@
 
 # Package Files #
 *.jar
+!ImplementorTest.jar
 *.war
 *.ear
 
