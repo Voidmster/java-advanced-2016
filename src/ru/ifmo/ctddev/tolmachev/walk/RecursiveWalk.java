@@ -2,7 +2,9 @@ package ru.ifmo.ctddev.tolmachev.walk;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class RecursiveWalk {
 
@@ -20,7 +22,7 @@ public class RecursiveWalk {
                 while (true) {
                     try {
                         line = reader.readLine();
-                    } catch (IOException e){
+                    } catch (IOException e) {
                         System.out.println("Error while reading input file");
                     }
                     if (line == null) break;

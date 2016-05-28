@@ -5,7 +5,7 @@ rm -rf ${dir}
 mkdir ${dir}
 
 echo "Compiling sources..."
-javac -d ${dir} -cp ./Testers/ImplementorTest.jar ./ru/ifmo/ctddev/tolmachev/implementor/*.java
+javac -d ${dir} -cp ./Testers/ImplementorTest.jar src/ru/ifmo/ctddev/tolmachev/implementor/*.java
 
 echo "Creating jar..."
 echo "Manifest-Version: 1.0

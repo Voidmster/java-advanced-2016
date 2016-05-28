@@ -1,5 +1,6 @@
 package ru.ifmo.ctddev.tolmachev.walk;
 
+import javax.xml.bind.DatatypeConverter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStreamWriter;
@@ -10,7 +11,7 @@ import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import javax.xml.bind.DatatypeConverter;
+
 /**
  * Created by daniil on 13.02.16.
  */
@@ -45,7 +46,7 @@ public class MyFileVisitor extends SimpleFileVisitor<Path> {
         }
         return FileVisitResult.CONTINUE;
     }
-    
+
     @Override
     public FileVisitResult visitFileFailed(Path file, IOException exc) throws IOException {
         out.write(ZERO_STRING + file.toString() + "\n");

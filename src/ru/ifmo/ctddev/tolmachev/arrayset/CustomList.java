@@ -10,7 +10,7 @@ public class CustomList<T> extends AbstractList<T> {
     private final List<T> data;
     private final boolean order;
 
-    CustomList(List<T> data) {
+    public CustomList(List<T> data) {
         if (data instanceof CustomList) {
             CustomList<T> temp = (CustomList<T>) data;
             this.data = temp.data;
